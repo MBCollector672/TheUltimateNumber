@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|s:\\programming\\csharp scripts\\theultimatenumber\\ultimatenumbermanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|solutionrelative:ultimatenumbermanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|s:\\programming\\csharp scripts\\theultimatenumber\\ultimatenumberconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|solutionrelative:ultimatenumberconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\Landmine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\SandSpiderAI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|s:\\programming\\csharp scripts\\theultimatenumber\\theultimatenumber.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|solutionrelative:theultimatenumber.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|s:\\programming\\csharp scripts\\theultimatenumber\\specialaudioclip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|solutionrelative:specialaudioclip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\StartOfRound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\ShipTeleporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\JetpackItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|s:\\programming\\csharp scripts\\theultimatenumber\\theultimatenumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{623CA10A-8973-9B23-CDD3-DCC5668DD90D}|TheUltimateNumber.csproj|solutionrelative:theultimatenumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SandSpiderAI.cs",
+              "DocumentMoniker": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\SandSpiderAI.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\SandSpiderAI.cs",
+              "ToolTip": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\SandSpiderAI.cs",
+              "RelativeToolTip": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\SandSpiderAI.cs",
+              "ViewState": "AgIAACkDAAAAAAAAAAAAADwDAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T00:11:30.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StartOfRound.cs",
+              "DocumentMoniker": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\StartOfRound.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\StartOfRound.cs",
+              "ToolTip": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\StartOfRound.cs",
+              "RelativeToolTip": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\StartOfRound.cs",
+              "ViewState": "AgIAAMsBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T23:08:01.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TheUltimateNumber",
+              "DocumentMoniker": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\TheUltimateNumber.csproj",
+              "RelativeDocumentMoniker": "TheUltimateNumber.csproj",
+              "ToolTip": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\TheUltimateNumber.csproj",
+              "RelativeToolTip": "TheUltimateNumber.csproj",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-26T23:29:30.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ShipTeleporter.cs",
+              "DocumentMoniker": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\ShipTeleporter.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\ShipTeleporter.cs",
+              "ToolTip": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\ShipTeleporter.cs",
+              "RelativeToolTip": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\ShipTeleporter.cs",
+              "ViewState": "AgIAAIABAAAAAAAAAAAAAJMBAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T23:24:00.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JetpackItem.cs",
+              "DocumentMoniker": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\JetpackItem.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\JetpackItem.cs",
+              "ToolTip": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\JetpackItem.cs",
+              "RelativeToolTip": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\JetpackItem.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAAM4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T16:07:17.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UltimateNumberConfig.cs",
+              "DocumentMoniker": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\UltimateNumberConfig.cs",
+              "RelativeDocumentMoniker": "UltimateNumberConfig.cs",
+              "ToolTip": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\UltimateNumberConfig.cs",
+              "RelativeToolTip": "UltimateNumberConfig.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAgwBUAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T15:12:32.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SpecialAudioClip.cs",
+              "DocumentMoniker": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\SpecialAudioClip.cs",
+              "RelativeDocumentMoniker": "SpecialAudioClip.cs",
+              "ToolTip": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\SpecialAudioClip.cs",
+              "RelativeToolTip": "SpecialAudioClip.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T20:23:35.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Landmine.cs",
+              "DocumentMoniker": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\Landmine.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\Landmine.cs",
+              "ToolTip": "S:\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\Landmine.cs",
+              "RelativeToolTip": "..\\..\\..\\unity related\\projects\\lethalcompany-base-v73\\TheUltimateNumber\\Assets\\LethalCompany\\Game\\Scripts\\Assembly-CSharp\\Landmine.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAAAPwAAAC7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T16:08:22.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UltimateNumberManipulator.cs",
+              "DocumentMoniker": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\UltimateNumberManipulator.cs",
+              "RelativeDocumentMoniker": "UltimateNumberManipulator.cs",
+              "ToolTip": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\UltimateNumberManipulator.cs",
+              "RelativeToolTip": "UltimateNumberManipulator.cs",
+              "ViewState": "AgIAACYDAAAAAAAAAAAwwDsDAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T00:03:00.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TheUltimateNumber.cs",
+              "DocumentMoniker": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\TheUltimateNumber.cs",
+              "RelativeDocumentMoniker": "TheUltimateNumber.cs",
+              "ToolTip": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\TheUltimateNumber.cs",
+              "RelativeToolTip": "TheUltimateNumber.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAiwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T18:00:12.717Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
