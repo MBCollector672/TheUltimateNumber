@@ -1,9 +1,0 @@
-S:\Programming\CSharp Scripts\TheUltimateNumber\bin\Release\netstandard2.1\MBCollector672.TheUltimateNumber.deps.json
-S:\Programming\CSharp Scripts\TheUltimateNumber\bin\Release\netstandard2.1\MBCollector672.TheUltimateNumber.dll
-S:\Programming\CSharp Scripts\TheUltimateNumber\obj\Release\netstandard2.1\TheUltimateNumber.csproj.AssemblyReference.cache
-S:\Programming\CSharp Scripts\TheUltimateNumber\obj\Release\netstandard2.1\MyPluginInfo.cs
-S:\Programming\CSharp Scripts\TheUltimateNumber\obj\Release\netstandard2.1\TheUltimateNumber.GeneratedMSBuildEditorConfig.editorconfig
-S:\Programming\CSharp Scripts\TheUltimateNumber\obj\Release\netstandard2.1\TheUltimateNumber.AssemblyInfoInputs.cache
-S:\Programming\CSharp Scripts\TheUltimateNumber\obj\Release\netstandard2.1\TheUltimateNumber.AssemblyInfo.cs
-S:\Programming\CSharp Scripts\TheUltimateNumber\obj\Release\netstandard2.1\TheUltimateNumber.csproj.CoreCompileInputs.cache
-S:\Programming\CSharp Scripts\TheUltimateNumber\obj\Release\netstandard2.1\MBCollector672.TheUltimateNumber.dll
