@@ -7,10 +7,11 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "MBCollector672.TheUltimateNumber/1.0.0": {
+      "MBCollector672.TheUltimateNumber/1.0.1": {
         "dependencies": {
           "BepInEx.Core": "5.4.21",
-          "LethalCompany.GameLibs.Steam": "73.0.0-ngd.0",
+          "Evaisa.LethalLib": "1.2.0",
+          "LethalCompany.GameLibs.Steam": "81.0.0-ngd.0",
           "TeamBMX.LobbyCompatibility": "1.5.1"
         },
         "runtime": {
@@ -31,6 +32,17 @@
           "HarmonyX": "2.7.0"
         }
       },
+      "Evaisa.LethalLib/1.2.0": {
+        "dependencies": {
+          "BepInEx.Core": "5.4.21"
+        },
+        "runtime": {
+          "lib/netstandard2.1/LethalLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
       "HarmonyX/2.7.0": {
         "dependencies": {
           "MonoMod.RuntimeDetour": "21.12.13.1"
@@ -42,10 +54,10 @@
           }
         }
       },
-      "LethalCompany.GameLibs.Steam/73.0.0-ngd.0": {
+      "LethalCompany.GameLibs.Steam/81.0.0-ngd.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
-          "UnityEngine.Modules": "2022.3.9"
+          "UnityEngine.Modules": "2022.3.62"
         }
       },
       "Mono.Cecil/0.11.4": {
@@ -208,7 +220,7 @@
           }
         }
       },
-      "UnityEngine.Modules/2022.3.9": {
+      "UnityEngine.Modules/2022.3.62": {
         "runtime": {
           "lib/netstandard2.0/UnityEngine.AIModule.dll": {
             "assemblyVersion": "0.0.0.0",
@@ -479,7 +491,7 @@
     }
   },
   "libraries": {
-    "MBCollector672.TheUltimateNumber/1.0.0": {
+    "MBCollector672.TheUltimateNumber/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -498,6 +510,13 @@
       "path": "bepinex.core/5.4.21",
       "hashPath": "bepinex.core.5.4.21.nupkg.sha512"
     },
+    "Evaisa.LethalLib/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WxrBEToRr6ji57d9tH/ac8LVwkmhoTrk45kRCfnbKyWaH3gzTekuCUCdXg5fpkieILWyS7lJGnnr0uD7tlIKMA==",
+      "path": "evaisa.lethallib/1.2.0",
+      "hashPath": "evaisa.lethallib.1.2.0.nupkg.sha512"
+    },
     "HarmonyX/2.7.0": {
       "type": "package",
       "serviceable": true,
@@ -505,12 +524,12 @@
       "path": "harmonyx/2.7.0",
       "hashPath": "harmonyx.2.7.0.nupkg.sha512"
     },
-    "LethalCompany.GameLibs.Steam/73.0.0-ngd.0": {
+    "LethalCompany.GameLibs.Steam/81.0.0-ngd.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iaHCHoJTFiTnAyAYIrEbjCJOOuhcJ42+KJnEbmCmf4UdkhjSwwio2bcdPCbchodB9kEp+3v3ATgkBwYn56/Gdw==",
-      "path": "lethalcompany.gamelibs.steam/73.0.0-ngd.0",
-      "hashPath": "lethalcompany.gamelibs.steam.73.0.0-ngd.0.nupkg.sha512"
+      "sha512": "sha512-Wq4UBgTco96fJSrIOLbgqeIC3/D1MEdvngv43aVVR51UOuAmHPE0Pid6AYtV4cXlE74RdCtmAJGFT3uK+tDZgg==",
+      "path": "lethalcompany.gamelibs.steam/81.0.0-ngd.0",
+      "hashPath": "lethalcompany.gamelibs.steam.81.0.0-ngd.0.nupkg.sha512"
     },
     "Mono.Cecil/0.11.4": {
       "type": "package",
@@ -617,12 +636,12 @@
       "path": "teambmx.lobbycompatibility/1.5.1",
       "hashPath": "teambmx.lobbycompatibility.1.5.1.nupkg.sha512"
     },
-    "UnityEngine.Modules/2022.3.9": {
+    "UnityEngine.Modules/2022.3.62": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sSxqZjd05U0NWlX+eappdlsEuXFvDRHkUaClDVTocGRzCmIwNvgGJIPh22lGklIpNZ3cJZneYJkIUnEIazR8VA==",
-      "path": "unityengine.modules/2022.3.9",
-      "hashPath": "unityengine.modules.2022.3.9.nupkg.sha512"
+      "sha512": "sha512-zpu5dELUCFt7Rvvzp50iTrfVusJg+2gmlcaytGEoHYuIP+AOv57X272czjp+sA8N1onPo/IiHFnOEFtT9rLJBA==",
+      "path": "unityengine.modules/2022.3.62",
+      "hashPath": "unityengine.modules.2022.3.62.nupkg.sha512"
     }
   }
 }

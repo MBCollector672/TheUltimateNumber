@@ -1,16 +1,19 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using LobbyCompatibility.Attributes;
-using LobbyCompatibility.Enums;
+using LethalLib;
+using LethalLib.Modules;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
+using TMPro;
 using UnityEngine;
 
 namespace TheUltimateNumber 
 {
     [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
-    [BepInDependency("BMX.LobbyCompatibility", BepInDependency.DependencyFlags.HardDependency)]
-    [LobbyCompatibility(CompatibilityLevel.ClientOnly, VersionStrictness.None)]
+    [BepInDependency(LethalLib.Plugin.ModGUID, BepInDependency.DependencyFlags.HardDependency)]
     public class TheUltimateNumber : BaseUnityPlugin
     {
         public static TheUltimateNumber Instance { get; private set; } = null!;
@@ -36,8 +39,22 @@ namespace TheUltimateNumber
                     }
                 }
             }
+            string assetBundlePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "TheUltimateNumber.numbabundle");
+            AssetBundle bundle = AssetBundle.LoadFromFile(assetBundlePath);
 
-            Patch();
+                Item theUltimateNumberItem = bundle.LoadAsset<Item>("Assets/LethalCompany/Mods/TheUltimateNumber/items/TheUltimateNumber.asset");
+                NetworkPrefabs.RegisterNetworkPrefab(theUltimateNumberItem.spawnPrefab);
+                Utilities.FixMixerGroups(theUltimateNumberItem.spawnPrefab);
+                if (TheUltimateNumber.UltimateConfig.isOnAllMoons.Value == true)
+                {
+                    Items.RegisterScrap(theUltimateNumberItem, TheUltimateNumber.UltimateConfig.numberRarity.Value, Levels.LevelTypes.All);
+                }
+            else
+            {
+                Items.RegisterScrap(theUltimateNumberItem, TheUltimateNumber.UltimateConfig.numberRarity.Value, Levels.LevelTypes.None);
+            }
+
+                Patch();
 
             Logger.LogInfo($"{MyPluginInfo.PLUGIN_GUID} v{MyPluginInfo.PLUGIN_VERSION} has loaded!");
         }

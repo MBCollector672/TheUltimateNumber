@@ -20,6 +20,8 @@ namespace TheUltimateNumber
         public readonly ConfigEntry<float>? numberAudioSourceMinDistance;
         public readonly ConfigEntry<float>? numberAudioSourceMaxDistance;
         public readonly ConfigEntry<float>? explosionPhysicsForce;
+        public readonly ConfigEntry<bool>? isOnAllMoons;
+        public readonly ConfigEntry<int>? numberRarity;
         public UltimateNumberConfig(ConfigFile ultimateConfig)
         {
             ultimateConfig.SaveOnConfigSet = false;
@@ -94,6 +96,18 @@ namespace TheUltimateNumber
                "maxDistance",
                17f,
                "The maximum distance from The Ultimate Number's audio source where audio will be played. Default: 17"
+               );
+            isOnAllMoons = ultimateConfig.Bind(
+               "Spawning",
+               "isOnAllMoons",
+               true,
+               "Whether or not The Ultimate Number spawns on all moons. Disable only if you want to individually configure where the number spawns in something like Lethal Level Loader. Default: true"
+               );
+            numberRarity = ultimateConfig.Bind(
+               "Spawning",
+               "numberRarity",
+               10,
+               "(0-100) Rarity of The Ultimate Number if it's set to spawn on all moons. Default: 10"
                );
             explosionPhysicsForce = ultimateConfig.Bind(
                "Other Number Properties",

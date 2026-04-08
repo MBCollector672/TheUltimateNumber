@@ -36,6 +36,22 @@
           "build/BepInEx.PluginInfoProps.props": {}
         }
       },
+      "Evaisa.LethalLib/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "BepInEx.Core": "5.4.21"
+        },
+        "compile": {
+          "lib/netstandard2.1/LethalLib.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/LethalLib.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HarmonyX/2.7.0": {
         "type": "package",
         "dependencies": {
@@ -53,11 +69,11 @@
           }
         }
       },
-      "LethalCompany.GameLibs.Steam/73.0.0-ngd.0": {
+      "LethalCompany.GameLibs.Steam/81.0.0-ngd.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.JSON": "13.0.3",
-          "UnityEngine.Modules": "2022.3.9"
+          "UnityEngine.Modules": "2022.3.62"
         },
         "compile": {
           "ref/netstandard2.1/AmazingAssets.TerrainToMesh.dll": {},
@@ -65,6 +81,9 @@
           "ref/netstandard2.1/Assembly-CSharp.dll": {},
           "ref/netstandard2.1/ClientNetworkTransform.dll": {},
           "ref/netstandard2.1/DissonanceVoip.dll": {},
+          "ref/netstandard2.1/DunGen.Integration.ASPP.dll": {},
+          "ref/netstandard2.1/DunGen.Integration.UnityNav.dll": {},
+          "ref/netstandard2.1/DunGen.dll": {},
           "ref/netstandard2.1/EasyTextEffects.dll": {},
           "ref/netstandard2.1/Facepunch Transport for Netcode for GameObjects.dll": {},
           "ref/netstandard2.1/Facepunch.Steamworks.Win64.dll": {},
@@ -121,9 +140,19 @@
           "ref/netstandard2.1/Unity.TextMeshPro.dll": {},
           "ref/netstandard2.1/Unity.Timeline.dll": {},
           "ref/netstandard2.1/Unity.VisualEffectGraph.Runtime.dll": {},
+          "ref/netstandard2.1/Unity.XR.CoreUtils.dll": {},
+          "ref/netstandard2.1/Unity.XR.Management.dll": {},
+          "ref/netstandard2.1/Unity.XR.OpenXR.Features.ConformanceAutomation.dll": {},
+          "ref/netstandard2.1/Unity.XR.OpenXR.Features.MetaQuestSupport.dll": {},
+          "ref/netstandard2.1/Unity.XR.OpenXR.Features.MockRuntime.dll": {},
+          "ref/netstandard2.1/Unity.XR.OpenXR.Features.OculusQuestSupport.dll": {},
+          "ref/netstandard2.1/Unity.XR.OpenXR.Features.RuntimeDebugger.dll": {},
+          "ref/netstandard2.1/Unity.XR.OpenXR.dll": {},
           "ref/netstandard2.1/UnityEngine.ARModule.dll": {},
           "ref/netstandard2.1/UnityEngine.NVIDIAModule.dll": {},
+          "ref/netstandard2.1/UnityEngine.SpatialTracking.dll": {},
           "ref/netstandard2.1/UnityEngine.UI.dll": {},
+          "ref/netstandard2.1/UnityEngine.XR.LegacyInputHelpers.dll": {},
           "ref/netstandard2.1/com.olegknyazev.softmask.dll": {}
         }
       },
@@ -644,7 +673,7 @@
           "lib/netstandard2.1/BMX.LobbyCompatibility.dll": {}
         }
       },
-      "UnityEngine.Modules/2022.3.9": {
+      "UnityEngine.Modules/2022.3.62": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/UnityEngine.AIModule.dll": {},
@@ -841,6 +870,20 @@
         "build/BepInEx.PluginInfoProps.props"
       ]
     },
+    "Evaisa.LethalLib/1.2.0": {
+      "sha512": "WxrBEToRr6ji57d9tH/ac8LVwkmhoTrk45kRCfnbKyWaH3gzTekuCUCdXg5fpkieILWyS7lJGnnr0uD7tlIKMA==",
+      "type": "package",
+      "path": "evaisa.lethallib/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "evaisa.lethallib.1.2.0.nupkg.sha512",
+        "evaisa.lethallib.nuspec",
+        "lib/netstandard2.1/LethalLib.dll",
+        "lib/netstandard2.1/LethalLib.xml"
+      ]
+    },
     "HarmonyX/2.7.0": {
       "sha512": "lec/SkduQspMa3Pi/nM/NSvA84Za8HCCWA8ybdToKiTqnBZa+JC5g6rxoFQCg/1vNuYcvjy77edePZzIEsRmvw==",
       "type": "package",
@@ -860,20 +903,23 @@
         "logo_mini.png"
       ]
     },
-    "LethalCompany.GameLibs.Steam/73.0.0-ngd.0": {
-      "sha512": "iaHCHoJTFiTnAyAYIrEbjCJOOuhcJ42+KJnEbmCmf4UdkhjSwwio2bcdPCbchodB9kEp+3v3ATgkBwYn56/Gdw==",
+    "LethalCompany.GameLibs.Steam/81.0.0-ngd.0": {
+      "sha512": "Wq4UBgTco96fJSrIOLbgqeIC3/D1MEdvngv43aVVR51UOuAmHPE0Pid6AYtV4cXlE74RdCtmAJGFT3uK+tDZgg==",
       "type": "package",
-      "path": "lethalcompany.gamelibs.steam/73.0.0-ngd.0",
+      "path": "lethalcompany.gamelibs.steam/81.0.0-ngd.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lethalcompany.gamelibs.steam.73.0.0-ngd.0.nupkg.sha512",
+        "lethalcompany.gamelibs.steam.81.0.0-ngd.0.nupkg.sha512",
         "lethalcompany.gamelibs.steam.nuspec",
         "ref/netstandard2.1/AmazingAssets.TerrainToMesh.dll",
         "ref/netstandard2.1/Assembly-CSharp-firstpass.dll",
         "ref/netstandard2.1/Assembly-CSharp.dll",
         "ref/netstandard2.1/ClientNetworkTransform.dll",
         "ref/netstandard2.1/DissonanceVoip.dll",
+        "ref/netstandard2.1/DunGen.Integration.ASPP.dll",
+        "ref/netstandard2.1/DunGen.Integration.UnityNav.dll",
+        "ref/netstandard2.1/DunGen.dll",
         "ref/netstandard2.1/EasyTextEffects.dll",
         "ref/netstandard2.1/Facepunch Transport for Netcode for GameObjects.dll",
         "ref/netstandard2.1/Facepunch.Steamworks.Win64.dll",
@@ -930,9 +976,19 @@
         "ref/netstandard2.1/Unity.TextMeshPro.dll",
         "ref/netstandard2.1/Unity.Timeline.dll",
         "ref/netstandard2.1/Unity.VisualEffectGraph.Runtime.dll",
+        "ref/netstandard2.1/Unity.XR.CoreUtils.dll",
+        "ref/netstandard2.1/Unity.XR.Management.dll",
+        "ref/netstandard2.1/Unity.XR.OpenXR.Features.ConformanceAutomation.dll",
+        "ref/netstandard2.1/Unity.XR.OpenXR.Features.MetaQuestSupport.dll",
+        "ref/netstandard2.1/Unity.XR.OpenXR.Features.MockRuntime.dll",
+        "ref/netstandard2.1/Unity.XR.OpenXR.Features.OculusQuestSupport.dll",
+        "ref/netstandard2.1/Unity.XR.OpenXR.Features.RuntimeDebugger.dll",
+        "ref/netstandard2.1/Unity.XR.OpenXR.dll",
         "ref/netstandard2.1/UnityEngine.ARModule.dll",
         "ref/netstandard2.1/UnityEngine.NVIDIAModule.dll",
+        "ref/netstandard2.1/UnityEngine.SpatialTracking.dll",
         "ref/netstandard2.1/UnityEngine.UI.dll",
+        "ref/netstandard2.1/UnityEngine.XR.LegacyInputHelpers.dll",
         "ref/netstandard2.1/com.olegknyazev.softmask.dll"
       ]
     },
@@ -2749,10 +2805,10 @@
         "teambmx.lobbycompatibility.nuspec"
       ]
     },
-    "UnityEngine.Modules/2022.3.9": {
-      "sha512": "sSxqZjd05U0NWlX+eappdlsEuXFvDRHkUaClDVTocGRzCmIwNvgGJIPh22lGklIpNZ3cJZneYJkIUnEIazR8VA==",
+    "UnityEngine.Modules/2022.3.62": {
+      "sha512": "zpu5dELUCFt7Rvvzp50iTrfVusJg+2gmlcaytGEoHYuIP+AOv57X272czjp+sA8N1onPo/IiHFnOEFtT9rLJBA==",
       "type": "package",
-      "path": "unityengine.modules/2022.3.9",
+      "path": "unityengine.modules/2022.3.62",
       "files": [
         ".nupkg.metadata",
         "lib/net35/UnityEngine.AIModule.dll",
@@ -2953,7 +3009,7 @@
         "lib/netstandard2.0/UnityEngine.WindModule.dll",
         "lib/netstandard2.0/UnityEngine.XRModule.dll",
         "lib/netstandard2.0/UnityEngine.dll",
-        "unityengine.modules.2022.3.9.nupkg.sha512",
+        "unityengine.modules.2022.3.62.nupkg.sha512",
         "unityengine.modules.nuspec"
       ]
     }
@@ -2963,7 +3019,8 @@
       "BepInEx.Analyzers >= 1.*",
       "BepInEx.Core >= 5.*",
       "BepInEx.PluginInfoProps >= 2.*",
-      "LethalCompany.GameLibs.Steam >= *-*",
+      "Evaisa.LethalLib >= 1.2.0",
+      "LethalCompany.GameLibs.Steam >= 81.0.0-ngd.0",
       "TeamBMX.LobbyCompatibility >= 1.*"
     ]
   },
@@ -2971,7 +3028,7 @@
     "C:\\Users\\MBCollector672\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "restore": {
       "projectUniqueName": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\TheUltimateNumber.csproj",
       "projectName": "MBCollector672.TheUltimateNumber",
@@ -3030,10 +3087,14 @@
             "target": "Package",
             "version": "[2.*, )"
           },
+          "Evaisa.LethalLib": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          },
           "LethalCompany.GameLibs.Steam": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[*-*, )"
+            "version": "[81.0.0-ngd.0, )"
           },
           "TeamBMX.LobbyCompatibility": {
             "suppressParent": "All",

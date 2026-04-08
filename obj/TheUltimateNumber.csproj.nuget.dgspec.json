@@ -5,7 +5,7 @@
   },
   "projects": {
     "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\TheUltimateNumber.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "S:\\Programming\\CSharp Scripts\\TheUltimateNumber\\TheUltimateNumber.csproj",
         "projectName": "MBCollector672.TheUltimateNumber",
@@ -64,10 +64,14 @@
               "target": "Package",
               "version": "[2.*, )"
             },
+            "Evaisa.LethalLib": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
             "LethalCompany.GameLibs.Steam": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[*-*, )"
+              "version": "[81.0.0-ngd.0, )"
             },
             "TeamBMX.LobbyCompatibility": {
               "suppressParent": "All",
