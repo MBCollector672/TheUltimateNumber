@@ -6,6 +6,10 @@ Special numbers (numbers bigger than 9 that have meme status, ex. 69) will often
 
 ## Credits
 Tomatobird8 for some programming help and a few ideas for the mod.
+Xu Xiaolan, IAmBatby, and Robyn for programming help.
 
 ## Notes
 I plan on adding more customizability in an update. Custom audio clips, mostly. I could add support for custom meshes if there's enough demand for it (right now the number positions are hard-coded), but for some reason I have a feeling this mod will likely stay pretty obscure.
+
+## Issues
+Please report any issues to the mod's [GitHub](https://github.com/MBCollector672/TheUltimateNumber), or contact me on Discord (@mbcollector672).
