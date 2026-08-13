@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using TheUltimateNumber;
 using Unity.Netcode;
 using UnityEngine;
+using HarmonyLib;
+using System.Runtime.CompilerServices;
+using TheUltimateNumber.Patches;
 
 public class UltimateNumberManipulator : AnimatedItem
 {
@@ -128,6 +131,8 @@ public class UltimateNumberManipulator : AnimatedItem
     public Transform sixTransform;
     public Transform sevenTransform;
     public Transform twoTransform;
+    [HideInInspector]
+    public bool hasRunWaitForScrapToSpawnToSync = false;
 
     // Start is called before the first frame update
     public override void Start()
@@ -151,8 +156,8 @@ public class UltimateNumberManipulator : AnimatedItem
         {
             IsExploding = false;
             HasWaited = false;
-            StartCoroutine(WaitTenSeconds());
             HasUpdatedYet = false;
+            StartCoroutine(WaitTenSeconds());
         }
         questionmark.gameObject.SetActive(false);
         foreach(Transform i in numberPlacesArray)
@@ -165,8 +170,46 @@ public class UltimateNumberManipulator : AnimatedItem
         itemAudio.maxDistance = TheUltimateNumber.TheUltimateNumber.UltimateConfig.numberAudioSourceMaxDistance.Value;
         oopsAudioSource.maxDistance = TheUltimateNumber.TheUltimateNumber.UltimateConfig.numberAudioSourceMaxDistance.Value;
         itemAudio.minDistance = TheUltimateNumber.TheUltimateNumber.UltimateConfig.numberAudioSourceMinDistance.Value;
+        if (IsServer)
+        {
+            Console.WriteLine("Server! Subscribing");
+            ScrapSyncCheck.ScrapSyncedEvent += FixValue;
+        }
+        else
+        {
+            Console.WriteLine("Not server");
+        }
+        Console.WriteLine("start ran lol");
     }
 
+    void FixValue(object sender, EventArgs e)
+    {
+        if (!HasUpdatedYet) {
+            if (_scrapValueSyncer == null)
+            {
+                Console.WriteLine("_scrapValueSyncer doesn't exist!");
+            }
+            Console.WriteLine("Fixing number value!");
+            int scrapValueOld = scrapValue;
+            Console.WriteLine("Old value is " + scrapValueOld + " new will be " + calculatedValue);
+            scrapValue = (int)calculatedValue;
+            Console.WriteLine("step 3" + currentScanNodeProperties.subText);
+            currentScanNodeProperties.subText = ("Value: $" + calculatedValue);
+            Console.WriteLine("step 4" + currentScanNodeProperties.scrapValue);
+            currentScanNodeProperties.scrapValue = (int)calculatedValue;
+            Console.WriteLine("step 5");
+            this.ScrapValueSyncer = (int)calculatedValue;
+            Console.WriteLine("Syncing scrap value with ScrapValueSyncer!");
+            syncTotalScrapValueServerRpc((int)calculatedValue, scrapValueOld);
+            Console.WriteLine("Done fixing value");
+            HasUpdatedYet = true;
+        }
+        else
+        {
+            Console.WriteLine("Not updating because it's already been updated! " + HasUpdatedYet);
+        }
+        return;
+    }
     // Update is called once per frame
     public override void Update()
     {
@@ -203,19 +246,8 @@ public class UltimateNumberManipulator : AnimatedItem
             //    return;
 
             //}
-            if (calculatedValue != this.scrapValue || haventMovedNumbersYet == true || scrapValue == -67)
+            if (calculatedValue != this.scrapValue || haventMovedNumbersYet == true)
             {
-                if(scrapValue == -67)
-                {
-                    scrapValue = (int)calculatedValue;
-                    currentScanNodeProperties.subText = ("Value: $" + calculatedValue);
-                    currentScanNodeProperties.scrapValue = (int)calculatedValue;
-                    ScrapValueSyncer = (int)calculatedValue;
-                    syncTotalScrapValueServerRpc((int)calculatedValue, -67);
-                    HasUpdatedYet = true;
-                    return;
-                }
-                else
                 {
                     TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("Value of TheUltimateNumber ID " + numberID + " has changed from " + calculatedValue + " to " + this.scrapValue + ". Updating...");
                     calculatedValue = this.scrapValue;
