@@ -1,12 +1,14 @@
+using HarmonyLib;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TheUltimateNumber;
-using Unity.Netcode;
-using UnityEngine;
-using HarmonyLib;
 using System.Runtime.CompilerServices;
+using TheUltimateNumber;
 using TheUltimateNumber.Patches;
+using Unity.Netcode;
+using Unity.XR.CoreUtils;
+using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class UltimateNumberManipulator : AnimatedItem
 {
@@ -61,7 +63,7 @@ public class UltimateNumberManipulator : AnimatedItem
     [HideInInspector]
     public int numberID;
     [HideInInspector]
-    public readonly NetworkVariable<int> _scrapValueSyncer = new();
+    public readonly NetworkVariable<int> _scrapValueSyncer = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
     public bool haventMovedNumbersYet = true;
     [HideInInspector]
@@ -88,25 +90,25 @@ public class UltimateNumberManipulator : AnimatedItem
     [HideInInspector]
     public byte place10 { get => _place10.Value; set { _place10.Value = (byte)value; } }
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place1 = new();
+    public readonly NetworkVariable<byte> _place1 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place2 = new();
+    public readonly NetworkVariable<byte> _place2 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place3 = new();
+    public readonly NetworkVariable<byte> _place3 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place4 = new();
+    public readonly NetworkVariable<byte> _place4 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place5 = new();
+    public readonly NetworkVariable<byte> _place5 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place6 = new();
+    public readonly NetworkVariable<byte> _place6 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place7 = new();
+    public readonly NetworkVariable<byte> _place7 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place8 = new();
+    public readonly NetworkVariable<byte> _place8 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place9 = new();
+    public readonly NetworkVariable<byte> _place9 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<byte> _place10 = new();
+    public readonly NetworkVariable<byte> _place10 = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
     public byte[] numbersInOrder;
     [HideInInspector]
@@ -117,13 +119,13 @@ public class UltimateNumberManipulator : AnimatedItem
     [HideInInspector]
     public bool IsExploding { get => _isExploding.Value; set { _isExploding.Value = value; } } 
     [HideInInspector]
-    public readonly NetworkVariable<bool> _hasWaited = new();
+    public readonly NetworkVariable<bool> _hasWaited = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
-    public readonly NetworkVariable<bool> _isExploding = new();
+    public readonly NetworkVariable<bool> _isExploding = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     [HideInInspector]
     public bool HasUpdatedYet { get => _hasUpdatedYet.Value; set { _hasUpdatedYet.Value = value; } }
     [HideInInspector]
-    public readonly NetworkVariable<bool> _hasUpdatedYet = new();
+    public readonly NetworkVariable<bool> _hasUpdatedYet = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     public List<Material> normalMat;
     public List<Material> orangeMat;
     [HideInInspector]
@@ -132,7 +134,7 @@ public class UltimateNumberManipulator : AnimatedItem
     public Transform sevenTransform;
     public Transform twoTransform;
     [HideInInspector]
-    public bool hasRunWaitForScrapToSpawnToSync = false;
+    public bool needToFixValue = false;
 
     // Start is called before the first frame update
     public override void Start()
@@ -172,48 +174,49 @@ public class UltimateNumberManipulator : AnimatedItem
         itemAudio.minDistance = TheUltimateNumber.TheUltimateNumber.UltimateConfig.numberAudioSourceMinDistance.Value;
         if (IsServer)
         {
-            Console.WriteLine("Server! Subscribing");
+            TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("Server! Subscribing");
             ScrapSyncCheck.ScrapSyncedEvent += FixValue;
         }
         else
         {
-            Console.WriteLine("Not server");
+            TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("Not server");
         }
-        Console.WriteLine("start ran lol");
+        TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("start ran lol");
     }
-
     void FixValue(object sender, EventArgs e)
     {
-        if (!HasUpdatedYet) {
-            if (_scrapValueSyncer == null)
-            {
-                Console.WriteLine("_scrapValueSyncer doesn't exist!");
-            }
-            Console.WriteLine("Fixing number value!");
-            int scrapValueOld = scrapValue;
-            Console.WriteLine("Old value is " + scrapValueOld + " new will be " + calculatedValue);
-            scrapValue = (int)calculatedValue;
-            Console.WriteLine("step 3" + currentScanNodeProperties.subText);
-            currentScanNodeProperties.subText = ("Value: $" + calculatedValue);
-            Console.WriteLine("step 4" + currentScanNodeProperties.scrapValue);
-            currentScanNodeProperties.scrapValue = (int)calculatedValue;
-            Console.WriteLine("step 5");
-            this.ScrapValueSyncer = (int)calculatedValue;
-            Console.WriteLine("Syncing scrap value with ScrapValueSyncer!");
-            syncTotalScrapValueServerRpc((int)calculatedValue, scrapValueOld);
-            Console.WriteLine("Done fixing value");
-            HasUpdatedYet = true;
-        }
-        else
-        {
-            Console.WriteLine("Not updating because it's already been updated! " + HasUpdatedYet);
-        }
+        needToFixValue = true;
         return;
     }
     // Update is called once per frame
     public override void Update()
     {
         base.Update();
+        if (needToFixValue == true)
+        {
+            if (!HasUpdatedYet)
+            {
+                if (_scrapValueSyncer == null)
+                {
+                    Console.WriteLine("_scrapValueSyncer doesn't exist!");
+                }
+                TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("Fixing number value!");
+                int scrapValueOld = scrapValue;
+                TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("Old value is " + scrapValueOld + " new will be " + calculatedValue);
+                scrapValue = (int)calculatedValue;
+                currentScanNodeProperties.subText = ("Value: $" + calculatedValue);
+                currentScanNodeProperties.scrapValue = (int)calculatedValue;
+                this.ScrapValueSyncer = (int)calculatedValue;
+                syncTotalScrapValueServerRpc((int)calculatedValue, scrapValueOld);
+                TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("Done fixing value");
+                HasUpdatedYet = true;
+                needToFixValue = false;
+            }
+            else
+            {
+                TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("Not updating because it's already been updated! " + HasUpdatedYet);
+            }
+        }
         if (ScrapValueSyncer == 0 && HasWaited == true && IsExploding == false)
         {
             StartCoroutine(PlayExplodeNumberSound());
@@ -1190,6 +1193,12 @@ public class UltimateNumberManipulator : AnimatedItem
         TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("Total scrap value before adding is " + RoundManager.Instance.totalScrapValueInLevel);
         RoundManager.Instance.totalScrapValueInLevel = RoundManager.Instance.totalScrapValueInLevel + plusval - minusval;
         TheUltimateNumber.TheUltimateNumber.Logger.LogDebug("Total scrap value after adding is " + RoundManager.Instance.totalScrapValueInLevel);
+    }
+
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+        ScrapSyncCheck.ScrapSyncedEvent -= FixValue;
     }
 }
 // buh
